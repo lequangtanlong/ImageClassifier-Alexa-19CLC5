@@ -360,11 +360,16 @@ correct_boxes(boxes, image_h, image_w, input_h, input_w)
 do_nms(boxes, 0.5)
 # define the labels
 
-labels = [
-    "person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck",
-    "bird", "cat", "dog",
-    "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"
-    ]
+labels = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck",
+    "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench",
+    "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe",
+    "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard",
+    "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard",
+    "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana",
+    "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake",
+    "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", "laptop", "mouse",
+    "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator",
+    "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
 
 # get the details of the detected objects
 v_boxes, v_labels, v_scores = get_boxes(boxes, labels, class_threshold)
